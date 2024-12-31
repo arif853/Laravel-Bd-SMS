@@ -41,7 +41,7 @@ class BDBulkSms extends AbstractProvider
             'to' => $number,
             'message' => $text,
         ];
-        $response = Request::get('http://api.greenweb.com.bd/api2.php', $query);
+        $response = Request::get('https://api.bdbulksms.net/api.php', $query);
 
         $body = $response->getBody();
         $smsResult = $body->getContents();
